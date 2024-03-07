@@ -17,7 +17,7 @@ export default class MainScene extends Phaser.Scene {
         WorldImg.setOrigin(0,0)
         WorldImg.setScale(this.cameras.main.width/WorldImg.width, this.cameras.main.height/WorldImg.height)
         this.input.on('pointerdown', () => {
-            this.scene.start('FirstScene', {data: numMiles})
+            this.scene.start('FirstScene', data)
         })
         const message = "Let's travel the world!";
         const numMiles = 0;
@@ -28,7 +28,7 @@ export default class MainScene extends Phaser.Scene {
                 fontSize: "70px",
             })
             .setOrigin(1, 0);
-        this.add.text(this.cameras.main.width - 1000, 600, "Miles traveled: " + numMiles, {
+        this.add.text(this.cameras.main.width - 1000, 600, "Miles traveled: " + data.numMiles, {
             color: "#FFFFFF",
             fontSize: "70px",
         })
