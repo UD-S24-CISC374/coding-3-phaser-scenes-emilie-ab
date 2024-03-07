@@ -1,6 +1,4 @@
-import Phaser, { Scene } from "phaser";
-import PhaserLogo from "../objects/phaserLogo";
-import FpsText from "../objects/fpsText";
+//import Phaser, { Scene } from "phaser";
 
 export interface SceneData {
     numMiles: number;
@@ -20,7 +18,6 @@ export default class MainScene extends Phaser.Scene {
             this.scene.start('FirstScene', data)
         })
         const message = "Let's travel the world!";
-        const numMiles = 0;
 
         this.add
             .text(this.cameras.main.width -150, 60, message, {
